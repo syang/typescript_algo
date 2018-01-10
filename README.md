@@ -26,7 +26,6 @@ Here we use the 'two_sum' problem as an example, and if you follow these steps, 
 - `npm install chai --save-dev` # for testing
 - `npm install  ts-node --save-dev`
 - `npm install typescript --save-dev`
-- `npm install --save-dev webpack`
 
 #### Setup your tsconfig.json
 - `touch tsconfig.json`
@@ -50,8 +49,8 @@ Here we use the 'two_sum' problem as an example, and if you follow these steps, 
 ```
 
 #### Coding and testing
-- `mkdir src`
-- `mkdir test`
+- write your *.ts
+- write your *.spec.ts (or *.unit.ts)
 
 #### Submit your PR
 
