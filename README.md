@@ -23,10 +23,15 @@ Here we use the 'two_sum' problem as an example, and if you follow these steps, 
 - `mkdir two_sum`
 - `cd two_sum`
 
-
 #### Setup your package.json
 - `npm init` and fill in the right input as you wish
-    - `npm install mocha --save-dev` # for testing code
+    - add the test script to package.json
+    ```
+      "scripts": {
+            "test": "./node_modules/.bin/mocha --require ts-node/register ./*.spec.ts"
+        },
+    ```
+    - `npm install mocha @types/mocha --save-dev` # for testing code
     - `npm install chai --save-dev` # for testing code
     - `npm install  ts-node --save-dev` # for testing command
     - `npm install typescript --save-dev`
@@ -58,13 +63,8 @@ Here we use the 'two_sum' problem as an example, and if you follow these steps, 
 
 #### Coding and testing
 - write your *.ts
-- write your *.spec.ts (or *.unit.ts)
-    - add the test script to package.json
-    ```
-      "scripts": {
-            "test": "./node_modules/.bin/mocha --require ts-node/register ./*.spec.ts"
-        },
-    ```
+- write your *.test.ts (or *.spec.ts)
+- run tests `npm test`
 
 #### Submit your PR
 

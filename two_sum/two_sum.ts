@@ -1,4 +1,4 @@
-export const twoSum = (target: number, nums: number[]) => {
+export const twoSum = (target: number, nums: number[]): number[] => {
     const booking = new Map();
     // this is a good way
     for (const [index, value] of nums.entries()) {

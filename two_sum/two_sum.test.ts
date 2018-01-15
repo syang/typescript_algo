@@ -1,4 +1,4 @@
-import { describe, expect, it } from "chai";
+import { expect } from "chai";
 import "mocha";
 import { twoSum } from "./two_sum";
 
