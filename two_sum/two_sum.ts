@@ -1,5 +1,6 @@
-export const two_sum = (target : number, nums : number[]) => {
-    let booking = new Map();
+export const twoSum = (target: number, nums: number[]) => {
+    const booking = new Map();
+    // this is a good way
     for (const [index, value] of nums.entries()) {
         // console.log(index, value);
         if (booking.has(target - value)) {
@@ -9,5 +10,4 @@ export const two_sum = (target : number, nums : number[]) => {
         }
     }
     return [null, null];
-}
-
+};

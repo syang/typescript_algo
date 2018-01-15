@@ -12,8 +12,12 @@ Here we use the 'two_sum' problem as an example, and if you follow these steps, 
 ## Steps to build a problem solver
 
 #### Prepare global packages (if you have not)
+- (optional) install VSCode to streamline your development
+    - [See more VSCode usage here](http://vscode-docs1.readthedocs.io/en/latest/editor/debugging/)
 - `npm install typescript -g` # to make simple things like tsc --init
 - `npm install -g ts-node` # TypeScript execution environment and REPL for node 
+- `npm install -g tslint`  # make sure tslint command works
+    - Install tslint plugin within VSCode
 
 #### Make and go to your directory
 - `mkdir two_sum`
@@ -22,10 +26,10 @@ Here we use the 'two_sum' problem as an example, and if you follow these steps, 
 
 #### Setup your package.json
 - `npm init` and fill in the right input as you wish
-- `npm install mocha --save-dev` # for testing
-- `npm install chai --save-dev` # for testing
-- `npm install  ts-node --save-dev`
-- `npm install typescript --save-dev`
+    - `npm install mocha --save-dev` # for testing code
+    - `npm install chai --save-dev` # for testing code
+    - `npm install  ts-node --save-dev` # for testing command
+    - `npm install typescript --save-dev`
 
 #### Setup your tsconfig.json
 - `touch tsconfig.json`
@@ -48,9 +52,19 @@ Here we use the 'two_sum' problem as an example, and if you follow these steps, 
 }
 ```
 
+#### setup your tslint.json
+
+- `tslint -i`  # create a default tslint rule file, without which vscode won't be able to inspect within IDE
+
 #### Coding and testing
 - write your *.ts
 - write your *.spec.ts (or *.unit.ts)
+    - add the test script to package.json
+    ```
+      "scripts": {
+            "test": "./node_modules/.bin/mocha --require ts-node/register ./*.spec.ts"
+        },
+    ```
 
 #### Submit your PR
 
