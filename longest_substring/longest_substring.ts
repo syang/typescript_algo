@@ -13,7 +13,7 @@ export const longestSubString = (inputString: string): number => {
             }
             subStringChars.clear();
             subStringChars.add(inputString.charAt(i));
-            counter = 0;
+            counter = 1;
         }
     }
     return subStringLength;
